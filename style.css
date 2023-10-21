@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+::selection{
+    background-color: black;
+    color: rgb(238, 194, 194);
+}
+.parent{
+    height:400px;
+    width: 300px;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px
+}
+.parent:hover .child{
+    left:-40px
+}
+.parent img{
+    height: 100%;
+    width: 100%;
+    transition: 1.2s;
+}
+.parent:hover img{
+    transform: scale(1.5);
+}
+.child{
+    position: absolute;
+    height: 85%;
+    width: 75%;
+    padding: 10% 5% 10% 20%;
+    top: 0;
+    left: -320px;
+    z-index: 1;
+    transition: 1s;
+}
+.child::after{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: chocolate;
+    content: "";
+    top: 0;
+    left: 0;
+    opacity: .6;
+    z-index: -1;
+}
+.child p{
+    margin: 10px 0;
+    
+}
+.child a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 10px;
+    transition: 1s;
+}
+.child a:hover{
+    background-color: rgb(31, 30, 30);
+    color: rgb(236, 170, 170);
+    transform: translateX(10px);
+}
